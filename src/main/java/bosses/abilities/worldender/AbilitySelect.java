@@ -24,7 +24,7 @@ public class AbilitySelect extends Ultimate {
         int low = 0;
         int high = abilities.length - 1;
         int randomInt = r.nextInt(high - low) + low;
-        getBoss().addAbility(abilities[randomInt]);
+        getBoss().addTemporaryAbility(abilities[randomInt]);
     }
 
     @Override

@@ -86,7 +86,7 @@ public class Boss {
         this.abilities = newAbilities;
     }
 
-    public void addAbility(Class<? extends Ability> ability) {
+    public void addTemporaryAbility(Class<? extends Ability> ability) {
         try {
             Ability newAbility = ability.newInstance();
             newAbility.setDestroyOnUse(true);
