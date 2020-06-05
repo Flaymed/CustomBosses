@@ -3,6 +3,7 @@ package bosses;
 import ability.Ability;
 import boss.Boss;
 import boss.BossManager;
+import bosses.abilities.worldender.AbilitySelect;
 import bosses.abilities.worldender.BossSummoner;
 import bosses.abilities.worldender.Scorch;
 import bosses.abilities.worldender.WorldsWrath;
@@ -19,7 +20,7 @@ import org.bukkit.util.EulerAngle;
 
 public class WorldEnder extends Boss {
     public WorldEnder(Location spawnLocation) {
-        super(spawnLocation, EntityType.ARMOR_STAND, "World Ender", 100, new bosses.abilities.worldender.WorldEnder(), WorldsWrath.class, BossSummoner.class, Scorch.class);
+        super(spawnLocation, EntityType.ARMOR_STAND, "World Ender", 100, new AbilitySelect(), WorldsWrath.class, BossSummoner.class, Scorch.class);
         ArmorStand bossArmor =  ((ArmorStand) getBossEntity());
         bossArmor.setGravity(false);
         bossArmor.setItemInHand(new ItemStack(Material.DIAMOND_SWORD));

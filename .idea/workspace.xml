@@ -4,7 +4,10 @@
     <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ccb108b-f2ab-4ac7-8763-cea1fa842c65" name="Default Changelist" comment="" />
+    <list default="true" id="7ccb108b-f2ab-4ac7-8763-cea1fa842c65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CustomBossPlugin" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cDcvVPpXd4dgnmQTzq4wbqCA3T" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
