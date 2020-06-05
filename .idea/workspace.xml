@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccb108b-f2ab-4ac7-8763-cea1fa842c65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulStealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +92,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1591318791120">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1591377924665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-762.2560.1400@0.0.1920.1040" timestamp="1591318791120" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.-762.2560.1400@0.0.1920.1040" timestamp="1591377924665" />
     <state x="711" y="371" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1590077676181">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
