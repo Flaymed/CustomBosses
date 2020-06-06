@@ -46,7 +46,7 @@ public class PlayerHitListener extends ListenerRegister {
     @EventHandler
     public void playerShot(EntityDamageEvent e) {
         if (e.getCause() == EntityDamageEvent.DamageCause.PROJECTILE && e.getEntity() instanceof Player) {
-            ((LivingEntity) e.getEntity()).damage(5);
+            ((LivingEntity) e.getEntity()).damage(3);
         }
 
     }
@@ -73,10 +73,10 @@ public class PlayerHitListener extends ListenerRegister {
             return;
 
         if (bossPlayer.isMarked())
-            player.damage(4 + (0.1 * 4));
+            player.damage(2 * 1.1);
         else
-            player.damage(4);
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10 * 20, 2));
+            player.damage(2);
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 5 * 20, 2));
         return;
     }
 
@@ -87,13 +87,11 @@ public class PlayerHitListener extends ListenerRegister {
             for (Boss boss : BossManager.getBosses()) {
                 if (boss instanceof WitherGod) {
                     if (boss.isRampaged())
-                        player.damage((4 * 1.9) - 0.1);
+                        player.damage(2 * 1.9);
                     else
-                        player.damage(4);
-                    player.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 5 * 20, 1));
+                        player.damage(2);
                     break;
-                } else
-                    continue;
+                }
             }
         } else
             return;

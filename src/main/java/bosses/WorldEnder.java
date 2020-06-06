@@ -16,8 +16,8 @@ import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.util.EulerAngle;
 
 public class WorldEnder extends Boss {
-    public WorldEnder(Location spawnLocation) {
-        super(spawnLocation, EntityType.ARMOR_STAND, "World Ender", 100, new AbilitySelect(), WorldsWrath.class, BossSummoner.class, Scorch.class, SoulStealer.class);
+    public WorldEnder() {
+        super(EntityType.ARMOR_STAND, "World Ender", 5000, new AbilitySelect(), WorldsWrath.class, BossSummoner.class, Scorch.class, SoulStealer.class, SoulDisemboweler.class);
         ArmorStand bossArmor =  ((ArmorStand) getBossEntity());
         bossArmor.setGravity(false);
         bossArmor.setItemInHand(new ItemStack(Material.DIAMOND_SWORD));
@@ -54,8 +54,7 @@ public class WorldEnder extends Boss {
     @Override
     public void spawnBoss(Location location) {
         World world = location.getWorld();
-        Location spawnLocation = new Location(location.getWorld(), location.getBlockX(), location.getBlockY() + 5, location.getBlockZ());
-        Entity entity = world.spawnEntity(spawnLocation, getType());
+        Entity entity = world.spawnEntity(location, getType());
         setBossEntity(entity);
         BossManager.addBoss(this);
         Bukkit.getPluginManager().callEvent(new BossSpawnEvent(this));

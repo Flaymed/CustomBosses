@@ -23,7 +23,7 @@ public class BossSummoner extends Ability {
         int low = 0;
         int high = bosses.length - 1;
         int boss = r.nextInt(high - low) + low;
-        BossManager.spawnBoss(getBoss().getName(), bosses[boss], getBoss().getLocation());
+        BossManager.spawnBoss(bosses[boss]);
         getBoss().getWorld().playSound(getBoss().getLocation(), Sound.AMBIENCE_THUNDER, 4, 4);
     }
 

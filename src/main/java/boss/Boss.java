@@ -9,10 +9,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.*;
+import scanner.WorldScanner;
 
 import java.util.*;
 
@@ -29,9 +27,10 @@ public class Boss {
     private long rampagedAt = 0;
     private int invulnerableDuration = 0;
     private long invulnerableAt = 0;
+    private int taskId;
     HashMap<Player, Integer> damageDone = new HashMap<Player, Integer>();
 
-    public Boss(Location spawnLocation, EntityType type, String name, double MAX_HP, Ultimate ultimate, Class<? extends Ability>... abilities) {
+    public Boss(EntityType type, String name, double MAX_HP, Ultimate ultimate, Class<? extends Ability>... abilities) {
         this.type = type;
         this.name = name;
         this.MAX_HP = MAX_HP;
@@ -39,7 +38,7 @@ public class Boss {
         this.ultimate = ultimate;
         this.ultimate.setBoss(this);
 
-        spawnBoss(spawnLocation);
+        spawnBoss(WorldScanner.getBossSpawn());
         setUpAbilities(abilities);
     }
 
@@ -57,6 +56,7 @@ public class Boss {
     public void killBoss(Player player) {
         BossManager.removeBoss(this);
         for (Ability ability: this.abilities) {
+            this.abilities.remove(this);
             ability.destroy();
         }
         ((LivingEntity) getBossEntity()).setHealth(0);
@@ -213,7 +213,7 @@ public class Boss {
             i++;
             Player player = playerData.getKey();
             int damage = playerData.getValue();
-            playerChart += String.format("%s%s. %s %s || %s%s%s damage to %s%s%s!",
+            playerChart += String.format("%s%s. %s %s || %s%s%s damage to %s%s%s!\n",
                     ChatColor.RED, i, ChatColor.YELLOW, player.getName(), ChatColor.GRAY, ChatColor.YELLOW, damage, ChatColor.GRAY, ChatColor.GREEN, getName(), ChatColor.GRAY);
         }
 
@@ -236,6 +236,14 @@ public class Boss {
     public void setInvulnerable(int duration) {
         this.invulnerableDuration = duration;
         this.invulnerableAt = System.currentTimeMillis();
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
+    }
+
+    public int getTaskId() {
+        return taskId;
     }
 
 }

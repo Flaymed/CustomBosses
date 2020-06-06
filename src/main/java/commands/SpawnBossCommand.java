@@ -14,7 +14,10 @@ public class SpawnBossCommand implements CommandExecutor {
         if (sender instanceof Player && sender.hasPermission("boss.spawn")) {
             String bossName = args[0];
 
-            BossManager.spawnBoss((Player) sender, bossName, ((Player) sender).getLocation());
+            boolean spawned = BossManager.spawnBoss(bossName);
+            if (!spawned)
+                sender.sendMessage(String.format("%sCustomBosses> %s Unknown boss type!", ChatColor.RED, ChatColor.GRAY));
+
         } else {
             sender.sendMessage(String.format("%sCustomBosses>%s You do not have permission to perform this command!", ChatColor.RED, ChatColor.GRAY));
         }

@@ -23,14 +23,14 @@ public class WorldsWrath extends Ability {
         for (BossPlayer bossPlayer : bossPlayers) {
             Player player = bossPlayer.getPlayer();
             getBoss().getWorld().strikeLightning(player.getLocation());
-            player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20 * 20, 5));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 20 * 20, 5));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 3 * 20, 3));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 3 * 20, 3));
             player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 4, 2);
         }
     }
 
     @Override
     public long getCooldown() {
-        return 40;
+        return 50;
     }
 }

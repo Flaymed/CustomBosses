@@ -4,10 +4,14 @@ import boss.Boss;
 import boss.BossManager;
 import boss.BossPlayer;
 import boss.BossPlayerManager;
+import bosses.ZombieKing;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.entity.*;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Arrow;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -19,6 +23,31 @@ import java.util.ArrayList;
 public class BossHitListener extends ListenerRegister {
     public BossHitListener(JavaPlugin plugin) {
         super(plugin);
+    }
+
+    @EventHandler
+    public void bossDamageEvent(EntityDamageEvent e) {
+
+        //This happens if an damage event happens as the entity's health is set to 0, it will create and NullPointerException if this is not here
+        if (e.getEntity() == null)
+            return;
+
+        Boss boss = BossManager.getBoss(e.getEntity());
+        EntityDamageEvent.DamageCause cause = e.getCause();
+
+        //Prevents the rest of the code running if the entity is not a boss.
+        if (boss == null)
+            return;
+
+        if (cause.equals(EntityDamageEvent.DamageCause.FALL))
+            bossTakenFallDamage(e, boss);
+
+        if (cause.equals(EntityDamageEvent.DamageCause.FIRE) || cause.equals(EntityDamageEvent.DamageCause.FIRE_TICK) || cause.equals(EntityDamageEvent.DamageCause.LAVA))
+            e.setCancelled(true);
+
+        if (cause.equals(EntityDamageEvent.DamageCause.BLOCK_EXPLOSION) || cause.equals(EntityDamageEvent.DamageCause.ENTITY_EXPLOSION))
+            e.setDamage(0);
+
     }
 
     @EventHandler
@@ -37,52 +66,11 @@ public class BossHitListener extends ListenerRegister {
                 return;
             }
 
-            if (e.getDamager() instanceof Arrow) {
+            if (e.getDamager() instanceof Arrow)
+                arrowHitBoss(e, boss);
 
-                ((LivingEntity) e.getEntity()).setHealth(((LivingEntity) e.getEntity()).getMaxHealth());
-                Arrow arrow = (Arrow) e.getDamager();
-                Player player = (Player) arrow.getShooter();
-
-                boss.setHP(boss.getHP() - 12);
-                boss.addDamage(player, 12);
-
-                if (boss.getHP() <= boss.getMAXHP() * 0.1)
-                    boss.activateUltimate();
-
-                if (boss.getHP() <= 0)
-                    boss.killBoss(player);
-
-                return;
-            }
-
-            if (e.getDamager() instanceof Player) {
-
-                ((LivingEntity) e.getEntity()).setHealth(((LivingEntity) e.getEntity()).getMaxHealth());
-
-                if (((Player) e.getDamager()).getItemInHand().getType().equals(Material.DIAMOND_SWORD)) {
-                    boss.setHP(boss.getHP() - 10);
-                    boss.addDamage(((Player) e.getDamager()), 10);
-                } else {
-                    boss.setHP(boss.getHP() - 1);
-                    boss.addDamage(((Player) e.getDamager()), 1);
-                }
-            }
-
-            if (e.getCause() == EntityDamageEvent.DamageCause.FALL) {
-                e.setCancelled(true);
-                ArrayList<BossPlayer> bossPlayers = BossPlayerManager.getBossPlayers();
-                for (BossPlayer bossPlayer : bossPlayers) {
-                    Player player = bossPlayer.getPlayer();
-                    double playerX = player.getLocation().getX();
-                    double playerZ = player.getLocation().getZ();
-                    double bossX = boss.getBossEntity().getLocation().getX();
-                    double bossZ = boss.getBossEntity().getLocation().getZ();
-                    double distance = calculateDistanceBetweenPoints(playerX, playerZ, bossX, bossZ);
-                    if (distance <= 30)
-                        pound(player.getLocation(), player, 2, 5);
-                }
-
-            }
+            if (e.getDamager() instanceof Player)
+                playerHitBoss(e, boss);
 
             if (boss.getHP() <= boss.getMAXHP() * 0.1)
                 boss.activateUltimate();
@@ -94,11 +82,10 @@ public class BossHitListener extends ListenerRegister {
 
     }
 
-    private double calculateDistanceBetweenPoints(double x1, double z1, double x2, double z2) {
-        double zAbs = Math.abs(z2 - z1);
-        double xAbs = Math.abs(x2 - x1);
-
-        return Math.hypot(zAbs, xAbs);
+    private double distance(double x1, double z1, double x2, double z2) {
+        // Calculating distance
+        return Math.sqrt(Math.pow(x2 - x1, 2) +
+                Math.pow(z2 - z1, 2) * 1.0);
     }
 
     private void pound(Location currentLoc, Player player, double multiplier, double damage) {
@@ -117,6 +104,48 @@ public class BossHitListener extends ListenerRegister {
 
     private Vector fromAtoB(Vector a, Vector b) {
         return b.subtract(a);
+    }
+
+    private void arrowHitBoss(EntityDamageByEntityEvent e, Boss boss) {
+        ((LivingEntity) e.getEntity()).setHealth(((LivingEntity) e.getEntity()).getMaxHealth());
+        Arrow arrow = (Arrow) e.getDamager();
+        Player player = (Player) arrow.getShooter();
+
+        boss.removeHP(8);
+        boss.addDamage(player, 8);
+
+    }
+
+    private void playerHitBoss(EntityDamageByEntityEvent e, Boss boss) {
+        ((LivingEntity) e.getEntity()).setHealth(((LivingEntity) e.getEntity()).getMaxHealth());
+
+        if (((Player) e.getDamager()).getItemInHand().getType().equals(Material.DIAMOND_SWORD)) {
+            boss.removeHP(10);
+            boss.addDamage(((Player) e.getDamager()), 10);
+        } else {
+            boss.removeHP(1);
+            boss.addDamage(((Player) e.getDamager()), 1);
+        }
+    }
+
+    private void bossTakenFallDamage(EntityDamageEvent e, Boss boss) {
+        e.setDamage(0);
+        if (boss instanceof ZombieKing) {
+            double bossX = boss.getLocation().getX();
+            double bossZ = boss.getLocation().getZ();
+            ArrayList<BossPlayer> bossPlayers = BossPlayerManager.getBossPlayers();
+            if (bossPlayers.isEmpty())
+                return;
+            for (BossPlayer bossPlayer : bossPlayers) {
+                Player player = bossPlayer.getPlayer();
+                double playerX = player.getLocation().getX();
+                double playerZ = player.getLocation().getZ();
+                double distance = distance(bossX, bossZ, playerX, playerZ);
+                if (distance <= 30)
+                    pound(boss.getLocation(), player, 2, 6);
+
+            }
+        }
     }
 
 }

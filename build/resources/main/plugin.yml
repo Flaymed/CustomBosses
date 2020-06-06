@@ -13,3 +13,6 @@ commands:
   spawnboss:
     description: Spawn a boss
     usage: /spawnboss <bossname>
+  scanworld:
+    description: Scan the world
+    usage: /scanworld

@@ -1,9 +1,8 @@
 package bosses.abilities.zombieking;
 
-import ability.Ability;
-import org.bukkit.ChatColor;
+import ability.Ultimate;
 
-public class UnDeadHealing extends Ability {
+public class UnDeadHealing extends Ultimate {
     @Override
     public String getName() {
         return "Undead Healing";
@@ -15,17 +14,12 @@ public class UnDeadHealing extends Ability {
             return;
 
         double missingHP = getBoss().getMAXHP() - getBoss().getHP();
-        getBoss().setHP(getBoss().getHP() + (missingHP * 0.15));
+        getBoss().setHP(getBoss().getHP() + (missingHP * 0.2));
     }
 
     @Override
     public long getCooldown() {
-        return 1;
+        return 60;
     }
 
-    @Override
-    public String getUsedMessage(String abilityName) {
-        return String.format("%sCustomBosses> %s%s%s healed 15 percent of his missing health!",
-                ChatColor.RED, ChatColor.GREEN, getBoss().getName(), ChatColor.GRAY);
-    }
 }

@@ -1,13 +1,13 @@
 package bosses.abilities.broodmother;
 
 import ability.Ability;
+import boss.BossPlayer;
+import boss.BossPlayerManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-
-import java.util.List;
 
 public class Spiderling extends Ability {
 
@@ -23,11 +23,12 @@ public class Spiderling extends Ability {
     @Override
     public void activate() {
         int count = Bukkit.getOnlinePlayers().size();
-        List<Player> players = (List<Player>) Bukkit.getOnlinePlayers();
-        for (int i = 0; i < count; i++) {
-            for (int s = 0; s < 5; s++) {
+
+        for (BossPlayer bossPlayer : BossPlayerManager.getBossPlayers()) {
+            Player player = bossPlayer.getPlayer();
+            for (int s = 1; s < 5; s++) {
                 Entity minion = getBoss().getWorld().spawnEntity(getBoss().getLocation(), EntityType.CAVE_SPIDER);
-                ((CaveSpider) minion).setTarget(players.get(i));
+                ((CaveSpider) minion).setTarget(player);
             }
         }
     }

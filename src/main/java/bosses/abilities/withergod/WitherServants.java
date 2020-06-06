@@ -23,8 +23,8 @@ public class WitherServants extends Ability {
         for (int i = 0; i < bossPlayers.size(); i++) {
             Player player = bossPlayers.get(i).getPlayer();
             player.playSound(player.getLocation(), Sound.IRONGOLEM_DEATH, 4, 2);
-            for (int w = 1; w < 10; w++) {
-                Skeleton skeleton = (Skeleton) player.getWorld().spawnEntity(getBoss().getBossEntity().getLocation(), EntityType.SKELETON);
+            for (int w = 1; w < 3; w++) {
+                Skeleton skeleton = (Skeleton) player.getWorld().spawnEntity(player.getLocation(), EntityType.SKELETON);
                 skeleton.setSkeletonType(Skeleton.SkeletonType.WITHER);
                 skeleton.setTarget(player);
             }
@@ -33,6 +33,6 @@ public class WitherServants extends Ability {
 
     @Override
     public long getCooldown() {
-        return 70;
+        return 60;
     }
 }

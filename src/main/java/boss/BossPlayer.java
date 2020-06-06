@@ -16,6 +16,8 @@ public class BossPlayer {
     private boolean invincible = false;
     private int markedTime;
     private long playerMarkedAt;
+    private int frozenTime;
+    private long frozenAt;
 
     public BossPlayer(Player player) {
         this.player = player;
@@ -60,10 +62,12 @@ public class BossPlayer {
         getPlayer().getInventory().setItem(0, bossKiller);
         getPlayer().getInventory().setItem(1, bossGunner);
         getPlayer().getInventory().setItem(2, new ItemStack(Material.COOKED_BEEF, 32));
-        getPlayer().getInventory().setItem(3, new ItemStack(Material.GOLDEN_APPLE, 10));
+        getPlayer().getInventory().setItem(3, new ItemStack(Material.GOLDEN_APPLE, 20));
+        getPlayer().getInventory().setItem(7, new ItemStack(Material.MILK_BUCKET, 1));
         getPlayer().getInventory().setItem(8, new ItemStack(Material.ARROW, 1));
 
         getPlayer().sendMessage(ChatColor.RED + "Go save the world.");
+        getPlayer().updateInventory();
     }
 
     public Player getPlayer() {
@@ -77,6 +81,15 @@ public class BossPlayer {
     public void mark(int duration) {
         this.markedTime = duration;
         this.playerMarkedAt = System.currentTimeMillis();
+    }
+
+    public void freeze(int duration) {
+        this.frozenTime = duration;
+        this.frozenAt = System.currentTimeMillis();
+    }
+
+    public boolean isFrozen() {
+        return (System.currentTimeMillis() - this.frozenAt) < this.frozenTime * 1000L;
     }
 
 }

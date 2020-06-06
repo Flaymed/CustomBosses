@@ -21,8 +21,8 @@ public class WebListener extends ListenerRegister {
             Material blockMaterial = e.getTo().getBlock().getType();
             if (blockMaterial.equals(Material.WEB)) {
                 player.damage(2);
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 10 * 20, 3));
-                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 10 * 20, 2));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 5 * 20, 3));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 5 * 20, 2));
                 player.playSound(player.getLocation(), Sound.AMBIENCE_CAVE, 3, 2);
             }
         }
