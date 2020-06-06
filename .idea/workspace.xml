@@ -5,71 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccb108b-f2ab-4ac7-8763-cea1fa842c65" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulDisemboweler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/commands/ScanWorldCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/BossAbilityToggleListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/listeners/PlayerMoveListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/scanner/WorldScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/boss/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/boss/Boss.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/boss/BossManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/boss/BossManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/boss/BossPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/boss/BossPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/BroodMother.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/BroodMother.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/WitherGod.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/WitherGod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/WorldEnder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/WorldEnder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/ZombieKing.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/ZombieKing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/broodmother/Spiderling.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/broodmother/Spiderling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/withergod/WitherServants.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/withergod/WitherServants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/AbilitySelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/AbilitySelect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/BossSummoner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/BossSummoner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/SoulStealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/SoulStealer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/WorldsWrath.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/worldender/WorldsWrath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/zombieking/Hoard.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/zombieking/Hoard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/zombieking/UnDeadHealing.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/bosses/abilities/zombieking/UnDeadHealing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/commands/FightCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/commands/FightCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/commands/SpawnBossCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/commands/SpawnBossCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/BossDamageListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/BossEventListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/BossEventListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/BossHitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/BossHitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/PlayerHitListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/PlayerHitListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/listeners/WebListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/listeners/WebListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/CustomBosses-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/CustomBosses-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boss/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boss/Boss.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boss/BossManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boss/BossManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/boss/BossPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boss/BossPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/BroodMother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/BroodMother.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/WitherGod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/WitherGod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/WorldEnder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/ZombieKing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/ZombieKing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/broodmother/Spiderling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/broodmother/Spiderling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/WitherServants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/WitherServants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/BossSummoner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/BossSummoner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/Scorch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/Scorch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulStealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulStealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldsWrath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldsWrath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulDisemboweler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulDisemboweler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/Hoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/Hoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UnDeadHealing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UnDeadHealing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/FightCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/FightCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/commands/SpawnBossCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/commands/SpawnBossCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/BossDamageListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/BossEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/BossHitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/BossHitListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/PlayerHitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/PlayerHitListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/WebListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/WebListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

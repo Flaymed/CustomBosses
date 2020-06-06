@@ -38,6 +38,6 @@ public class Hoard extends Ability {
 
     @Override
     public long getCooldown() {
-        return 25;
+        return 45;
     }
 }
