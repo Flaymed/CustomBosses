@@ -62,7 +62,7 @@ public class Boss {
         ((LivingEntity) getBossEntity()).setHealth(0);
         Bukkit.getPluginManager().callEvent(new BossDealthEvent(this));
         announceMultipleLines(String.format("%s****************************\n\n%s\n\n%s****************************\n%sCustomBosses> %sThe %s%s%s has been defeated by %s%s%s!",
-                ChatColor.GREEN, getPlayerDamage(), ChatColor.GREEN, ChatColor.RED, ChatColor.GRAY, ChatColor.GREEN, getName(), ChatColor.GRAY, ChatColor.GREEN, player.getName(), ChatColor.GRAY));
+                ChatColor.GREEN, this.getPlayerDamage(), ChatColor.GREEN, ChatColor.RED, ChatColor.GRAY, ChatColor.GREEN, this.getName(), ChatColor.GRAY, ChatColor.GREEN, player.getName(), ChatColor.GRAY));
     }
 
     protected void announceMultipleLines(String message) {
@@ -134,7 +134,7 @@ public class Boss {
     public String getBossSpawnMessage() {
         return String.format("%sCustomBosses> %sThe %s%s%s has spawned at: %s%s, %s, %s%s!",
                 ChatColor.RED, ChatColor.GRAY, ChatColor.GREEN, this.name, ChatColor.GRAY, ChatColor.GREEN,
-                this.bossEntity.getLocation().getBlockX(), this.bossEntity.getLocation().getBlockY(), this.bossEntity.getLocation().getBlockZ(), ChatColor.GRAY);
+                this.getLocation().getBlockX(), this.getLocation().getBlockY(), this.getLocation().getBlockZ(), ChatColor.GRAY);
     }
 
     public void addHP(double hp) {
@@ -207,14 +207,14 @@ public class Boss {
         }
 
         String playerChart = "";
-        int i = 0;
+        int i = Bukkit.getOnlinePlayers().size();
 
         for (Map.Entry<Player, Integer> playerData : temp.entrySet()) {
-            i++;
             Player player = playerData.getKey();
             int damage = playerData.getValue();
             playerChart += String.format("%s%s. %s %s || %s%s%s damage to %s%s%s!\n",
                     ChatColor.RED, i, ChatColor.YELLOW, player.getName(), ChatColor.GRAY, ChatColor.YELLOW, damage, ChatColor.GRAY, ChatColor.GREEN, getName(), ChatColor.GRAY);
+            i--;
         }
 
         return playerChart;
