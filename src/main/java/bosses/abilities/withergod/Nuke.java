@@ -20,7 +20,7 @@ public class Nuke extends Ability {
         for (int i = 0; i < bossPlayers.size(); i++) {
             Player player = bossPlayers.get(i).getPlayer();
             player.playSound(player.getLocation(), Sound.AMBIENCE_THUNDER, 6, 2);
-            player.getWorld().createExplosion(player.getLocation(), 4);
+            player.getWorld().createExplosion(player.getLocation(), 2);
         }
     }
 

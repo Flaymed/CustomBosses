@@ -29,6 +29,7 @@ public class Hoard extends Ability {
                 Zombie zombie = (Zombie) getBoss().getWorld().spawnEntity(getBoss().getBossEntity().getLocation(), EntityType.ZOMBIE);
                 zombie.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, (int) Double.POSITIVE_INFINITY, 1));
                 zombie.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, (int) Double.POSITIVE_INFINITY, 1));
+                zombie.addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, (int) Double.POSITIVE_INFINITY, 0));
                 zombie.setBaby(false);
                 zombie.setCanPickupItems(false);
                 zombie.setTarget(player);

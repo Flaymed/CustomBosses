@@ -81,6 +81,7 @@ public class PlayerHitListener extends ListenerRegister {
     }
 
     private void skeletonHitPlayer(EntityDamageByEntityEvent e) {
+        e.setCancelled(true);
         Skeleton skeleton = (Skeleton) e.getDamager();
         Player player = (Player) e.getEntity();
         if (skeleton.getSkeletonType() == Skeleton.SkeletonType.WITHER) {

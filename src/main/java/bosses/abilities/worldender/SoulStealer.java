@@ -21,12 +21,12 @@ public class SoulStealer extends Ability {
 
         for (BossPlayer bossPlayer : BossPlayerManager.getBossPlayers()) {
             Player player = bossPlayer.getPlayer();
-            player.damage(player.getHealth() * 0.1);
+            player.damage(player.getHealth() * 0.25);
         }
     }
 
     @Override
     public long getCooldown() {
-        return 90;
+        return 110;
     }
 }

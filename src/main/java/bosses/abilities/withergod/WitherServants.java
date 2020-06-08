@@ -23,7 +23,7 @@ public class WitherServants extends Ability {
         for (int i = 0; i < bossPlayers.size(); i++) {
             Player player = bossPlayers.get(i).getPlayer();
             player.playSound(player.getLocation(), Sound.IRONGOLEM_DEATH, 4, 2);
-            for (int w = 1; w < 3; w++) {
+            for (int w = 0; w < 3; w++) {
                 Skeleton skeleton = (Skeleton) player.getWorld().spawnEntity(player.getLocation(), EntityType.SKELETON);
                 skeleton.setSkeletonType(Skeleton.SkeletonType.WITHER);
                 skeleton.setTarget(player);

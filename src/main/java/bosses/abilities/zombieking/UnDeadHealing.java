@@ -19,7 +19,7 @@ public class UnDeadHealing extends Ultimate {
 
     @Override
     public long getCooldown() {
-        return 60;
+        return 90;
     }
 
 }

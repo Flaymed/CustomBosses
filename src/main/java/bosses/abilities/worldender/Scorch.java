@@ -22,8 +22,7 @@ public class Scorch extends Ability {
         for (BossPlayer bossPlayer : bossPlayers) {
             Player player = bossPlayer.getPlayer();
             player.playSound(player.getLocation(), Sound.GHAST_SCREAM, 4, 2);
-            player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 5 * 20, 1));
-            player.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 5 * 20, 1));
+            player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 5 * 20, 2));
 
         }
     }

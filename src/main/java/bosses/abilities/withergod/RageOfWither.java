@@ -10,8 +10,8 @@ public class RageOfWither extends Ultimate {
 
     @Override
     public void activate() {
-        getBoss().rampage(10);
-        getBoss().setInvulnerable(10);
+        getBoss().rampage(5);
+        getBoss().setInvulnerable(5);
     }
 
     @Override

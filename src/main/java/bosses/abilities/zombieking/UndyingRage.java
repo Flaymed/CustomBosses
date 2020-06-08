@@ -10,7 +10,7 @@ public class UndyingRage extends Ability {
 
     @Override
     public void activate() {
-        getBoss().setInvulnerable(20);
+        getBoss().setInvulnerable(15);
     }
 
     @Override

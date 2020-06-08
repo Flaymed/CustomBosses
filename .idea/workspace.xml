@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ccb108b-f2ab-4ac7-8763-cea1fa842c65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/Nuke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/Nuke.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/RageOfWither.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/RageOfWither.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/WitherServants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/withergod/WitherServants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/AbilitySelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/Scorch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/Scorch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulDisemboweler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulDisemboweler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulStealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/SoulStealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldsWrath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/worldender/WorldsWrath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/Hoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/Hoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UnDeadHealing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UnDeadHealing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UndyingRage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bosses/abilities/zombieking/UndyingRage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/listeners/PlayerHitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/listeners/PlayerHitListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -32,7 +32,7 @@ public class SoulDisemboweler extends Ability {
         BossPlayer bossPlayer = bossPlayers.get(randomPlayer);
         Player player = bossPlayer.getPlayer();
         Location playerLocation = player.getLocation();
-        Location newBossLocation = new Location(getBoss().getWorld(), playerLocation.getBlockX(), playerLocation.getBlockY() + 3, playerLocation.getBlockZ());
+        Location newBossLocation = new Location(getBoss().getWorld(), playerLocation.getBlockX(), playerLocation.getBlockY() + 2, playerLocation.getBlockZ());
         getBoss().getBossEntity().teleport(newBossLocation);
         getBoss().getWorld().strikeLightning(playerLocation);
         player.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 3 * 20, 1));

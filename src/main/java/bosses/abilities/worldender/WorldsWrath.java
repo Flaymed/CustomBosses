@@ -23,6 +23,7 @@ public class WorldsWrath extends Ability {
         for (BossPlayer bossPlayer : bossPlayers) {
             Player player = bossPlayer.getPlayer();
             getBoss().getWorld().strikeLightning(player.getLocation());
+            player.damage(2);
             player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 3 * 20, 3));
             player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 3 * 20, 3));
             player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 4, 2);
